@@ -1,0 +1,240 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+}
+.ex-10-icon {
+    font-size: 60px;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+/* SOLUZIONI */
+
+.ex-1-square{
+    transition: 2.5s;
+}
+.ex-1-square:hover{
+    background-color: red;
+}
+.ex-2-square{
+    transition: 2.5s;
+}
+.ex-2-square:active{
+    width: 100%;
+}
+.ex-3-square{
+    transition: 2.5s;
+}
+.ex-3-square:hover{
+    border-radius: 50%;
+}
+.ex-4-square{
+    transition: 2.5s;
+}
+.ex-4-square:hover{
+    opacity: 0;
+}
+.ex-5-square{
+    transition: 2.5s;
+}
+.ex-5-square:hover{
+    transform: scale(2);
+}
+.ex-5-square:active{
+    transform: scale(0.5);
+}
+.ex-6-img{
+    transition: 2.5s;
+}
+.ex-6-img:hover{
+    filter: grayscale(100%);
+}
+.ex-7-img {
+    transition: 2.5s;
+}
+.ex-7-img:hover {
+    filter: grayscale(100%) opacity(0.4);
+}
+.ex-8-img {
+    transition: 2.5s;
+}
+.ex-8-img:hover {
+    filter: grayscale(100%) opacity(0.4);
+    border-radius: 10px;
+}
+.ex-9-img {
+    transition: 2.5s;
+}
+.ex-9-img:hover {
+    filter: grayscale(100%) opacity(0.4);
+    border-radius: 10px;
+    transform: scale(1.5);
+}
+.ex-10-icon {
+    animation: spin linear 0.5s infinite;
+}
+@keyframes spin{
+    0%{
+        transform:rotate(1turn);
+    }
+}
+.ex-11-icon:hover{
+    animation: spin-second-type linear 1.5s;
+}
+@keyframes spin-second-type{
+    0%{
+        transform:rotate(0);
+    }
+    75%{
+        transform:rotate(270deg);
+    }
+    100%{
+        transform:rotate(0);
+    }
+}
+.ex-12-button:hover .ex-12-top-white{
+    animation: top-transition 2.5s linear;
+}
+@keyframes top-transition {
+    0%{
+        left:20%;
+    }
+    50%{
+        left: 50%;
+    }
+    100%{
+        left: 20%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: bottom-transition 2.5s linear;
+}
+@keyframes bottom-transition{
+    0%{
+        right:20%;
+    }
+    50%{
+        right:50%;
+    }
+    100%{
+        right:20%;
+    }
+}
+.ex-13-button:hover .ex-13-top-white {
+    animation: top-transation-full 2.5s linear;
+}
+@keyframes top-transation-full {
+    0% {
+        left: 10%;
+        top: -5px;
+    }
+    20%{
+        left: 20%;
+        top:-5px;
+    }
+    40%{
+        left: calc(100% - 10px);
+        top: 100%;
+    }
+    60%{
+        left: calc(100% - 10px);
+        top: 100%;
+    }
+    80%{
+        left: -10px;
+        top:-5px;
+    }
+    100% {
+        left: 10%;
+        top: -5px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: bottom-transation-full 2.5s linear;
+}
+@keyframes bottom-transation-full {
+    0% {
+        right: 10%;
+        bottom: -5px;
+    }
+    20%{
+        right: 20%;
+        bottom:-5px;
+    }
+    40%{
+        right: calc(100% - 10px);
+        bottom: 100%;
+    }
+    60%{
+        right: calc(100% - 10px);
+        bottom: 100%;
+    }
+    80%{
+        right: -10px;
+        bottom:-5px;
+    }
+    100% {
+        right: 10%;
+        bottom: -5px;
+    }
+}
